@@ -1,0 +1,83 @@
+.note {
+  border-left: 1px solid colors(borderPrimary);
+  flex: 1;
+}
+
+.note__function {
+  height: 80px;
+  @include max-screen($breakpoint-mobile) {
+		height: 100px;
+	}
+  padding: 15px 20px;
+  border-bottom: 1px solid colors(borderPrimary);
+}
+
+.note__function__icon-directory {
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+	background: url("../images/icon-folder.png") top left no-repeat;
+	background-size: 16px 15px;
+}
+
+.note__function__directory {
+  margin-bottom: 6px;
+}
+
+.note__function__decoration {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  @include max-screen($breakpoint-mobile) {
+		flex-flow: column wrap;
+	}
+}
+.note__function__decoration__text {
+  visibility: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  li {
+    margin-right: 16px;
+  }
+}
+.note__function__decoration__design {
+  visibility: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  li {
+    margin-right: 10px;
+    &:last-child {
+      visibility: visible;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
+
+.note__contents {
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.note__contents__heading {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.note__contents__body {
+  font-size: 14px;
+	color: colors(fontPrimary);
+	line-height: 1.6;
+  display: block;
+  width: 100%;
+  height: 80%;
+  border: none;
+}

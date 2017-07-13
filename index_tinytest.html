@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>memo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta property="og:site_name" content="among">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/jquery-3.2.0.min.js"></script>
+	<script src="assets/js/memo.js"></script>
+	<script src="assets/js/modalwindow.js"></script>
+	<script src="assets/js/tinymce/tinymce.min.js"></script>
+	<script>
+	tinymce.init({
+			selector: ".note__contents__body", // class="note__contents__body"にTinyMCEを適用
+			language: "ja", // 言語 = 日本語
+			menubar: false,
+	});
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700" rel="stylesheet">
+</head>
+<body>
+
+<!-- header -->
+<header class="nav">
+	<ul class="nav__list">
+		<li><a href="" title="ディレクトリリスト" class="btn-folder-list"></a></li>
+		<li><a href="index.html" class="nav__title select">すべてのノート</a></li>
+		<li><a href="" title="ノートリスト" class="btn-note"></a></li>
+	</ul>
+</header>
+<!-- /header -->
+
+<div class="container">
+	<!-- list-directory -->
+	<section class="list-directory">
+		<div class="list-directory__function">
+			<a data-target="modal-create-directory" title="新規ディレクトリ作成" class="btn-create-deirectory btn-modal"></a>
+		</div>
+		<ul class="list-directory__link">
+			<li class="all">すべて</li>
+		</ul>
+	</section>
+	<!-- /list-directory -->
+
+	<!-- list-note -->
+	<section class="list-note">
+		<div class="list-note__function">
+			<a title="新規ノート作成" class="btn-create-note"></a>
+			<input type="text" name="" value="" placeholder="フォルダ内を検索"  class="list-note__function__search">
+		</div>
+		<ul class="list-note__heading">
+			<li class="list-note__heading__time">更新日時</li>
+			<li class="list-note__heading__title">タイトル</li>
+		</ul>
+		<ul class="list-note__link">
+		</ul>
+
+	</section>
+	<!-- /list-note -->
+
+	<!-- contents-note -->
+	<section class="note">
+		<div class="note__function">
+			<span class="note__function__icon-directory"></span>
+			<select class="note__function__directory select" name="directory">
+				<option value="0">すべて</option>
+			</select>
+			<div class="note__function__decoration">
+				<ul class="note__function__decoration__text">
+					<li>
+						<select class="select" name="font">
+							<option value="">フォント名</option>
+							<option value="">フォント名</option>
+							<option value="">フォント名</option>
+						</select>
+					</li>
+					<li>
+						<select class="select" name="size">
+							<option value="">00px</option>
+							<option value="">00px</option>
+							<option value="">00px</option>
+						</select>
+					</li>
+				</ul>
+				<ul class="note__function__decoration__design">
+					<li>
+						<a href="" title="ボールド" class="btn-bold"></a>
+					</li>
+					<li>
+						<a href="" title="アンダーライン" class="btn-underbar"></a>
+					</li>
+					<li>
+						<a href="" title="フォントカラー" class="btn-color"></a>
+					</li>
+					<li>
+						<a href="" title="背景色" class="btn-textbg"></a>
+					</li>
+					<li>
+						<a href="" title="箇条書きリスト" class="btn-list-disc"></a>
+					</li>
+					<li>
+						<a href="" title="数字リスト" class="btn-list-decimal"></a>
+					</li>
+					<li>
+						<a href="" title="チェックボックス" class="btn-check"></a>
+					</li>
+					<li>
+						<a data-target="modal-delete-note" title="ゴミ箱" class="btn-trash btn-modal"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="note__contents">
+			<input type="text" class="note__contents__heading" placeholder="無題">
+
+			<textarea name="name" placeholder="入力を開始してください" class="note__contents__body"></textarea>
+
+		</div>
+
+	</section>
+	<!-- /note -->
+</div>
+
+<!-- 新規ディレクトリ作成 modalwindow -->
+<section id="modal-create-directory" class="modal modal-create-directory">
+	<div class="modal__bg">
+		<h1 class="modal__heading">新規ディレクトリ</h1>
+		<p class="modal__error">同じフォルダが既に存在します</p>
+		<input type="text" name="" value="" class="modal__input modal-create-directory-ttl">
+		<button type="button" name="button" class="btn btn-small modal__btn">追加</button>
+	</div>
+</section>
+<!-- /新規ディレクトリ作成 modalwindow -->
+
+<!-- ノート削除 modalwindow -->
+<section id="modal-delete-note" class="modal modal-delete-note">
+	<div class="modal__bg">
+		<h1 class="modal__heading">ノート削除</h1>
+		<p class="modal__description">削除してよろしいですか？</p>
+		<button type="button" name="button" class="btn btn-small btn-alert modal__btn">削除</button>
+	</div>
+</section>
+<!-- ノート削除  modalwindow -->
+
+</body>
+</html>

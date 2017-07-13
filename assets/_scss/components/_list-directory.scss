@@ -1,0 +1,54 @@
+.list-directory {
+  width: 200px;
+  background: #4A4A4A;
+  border-right: 1px solid colors(borderSecondary);
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+    height: 100%;
+		position: absolute;
+    top: 0;
+    left: 0;
+	}
+}
+
+.list-directory__function {
+  display: flex;
+  height: 80px;
+  padding: 20px;
+  border-bottom: 1px solid colors(borderSecondary);
+}
+
+.list-directory__link {
+  padding: 10px 0;
+  overflow-y: auto;
+  height: 100%;
+  li {
+    position: relative;
+    display: block;
+    padding: 10px 10px 10px 46px;
+    width: 200px;
+    color: colors(fontSecondary);
+    text-decoration: none;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 20px;
+      width: 16px;
+      height: 15px;
+      margin-top: -7px;
+      background: url("../images/icon-folder.png") top left no-repeat;
+      background-size: 16px 15px;
+    }
+    &:hover {
+      background-color: #404040;
+    }
+    &.on {
+      color: colors(fontLinkHover);
+      &::before {
+        background: url("../images/icon-folder-on.png") top left no-repeat;
+        background-size: 16px 15px;
+      }
+    }
+  }
+}

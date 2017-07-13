@@ -1,0 +1,33 @@
+input, select {
+vertical-align:middle;
+}
+
+input, textarea {
+  &:placeholder-shown {
+    color: colors(fontPlaceholder);
+  }
+  &:placeholder {
+    color: colors(fontPlaceholder);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.select {
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0 14px 0 0;
+  vertical-align: middle;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: content-box;
+  background: url(../images/icon-select.png) right 50% no-repeat;
+  background-size: 10px 6px;
+}

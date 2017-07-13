@@ -1,0 +1,177 @@
+//button.scss :ボタンに関する部品
+.btn {
+	text-align: center;
+	text-decoration: none;
+	background-color: colors(btnPrimary);
+	color: colors(btnTextPrimary);
+	display: inline-block;
+	font-size: 14px;
+	border: none;
+	border-radius: 4px;
+	content-box: border-box;
+	cursor: pointer;
+}
+
+.btn-small {
+	padding: 8px 36px;
+}
+
+.btn-max {
+	width: 100%;
+	padding: 12px 0;
+}
+
+.btn-alert {
+	background-color: colors(btnAlert);
+}
+
+
+.btn-create-deirectory {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #9b9b9b;
+	border-radius: 4px;
+	background: url("../images/icon-folder-create.png") center center no-repeat;
+	background-size: 17px 16px;
+	&:hover {
+		border: 1px solid #F6D813;
+		background: url("../images/icon-folder-create-on.png") center center no-repeat;
+		background-size: 17px 16px;
+	}
+}
+
+.btn-create-note {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #9b9b9b;
+	border-radius: 4px;
+	background: url("../images/icon-note-create.png") center center no-repeat;
+	background-size: 16px 19px;
+	&:hover {
+		border: 1px solid #F6D813;
+		background: url("../images/icon-note-create-on.png") center center no-repeat;
+		background-size: 16px 19px;
+	}
+}
+
+.btn-bold {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-bold.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-bold-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-underbar {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-underbar.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-underbar-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-color {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-color.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-color-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-textbg {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-textbg.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-textbg-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-list-disc {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-list-disc.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-list-disc-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-list-decimal {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-list-decimal.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-list-decimal-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-check {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-check.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-check-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-trash {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/btn-trash.png") center center no-repeat;
+	background-size: 20px 20px;
+	&.on {
+		background: url("../images/btn-trash-on.png") center center no-repeat;
+		background-size: 20px 20px;
+	}
+}
+
+.btn-note {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: url("../images/btn-note.png") center center no-repeat;
+	background-size: 44px 44px;
+	&:hover {
+		background: url("../images/btn-note-on.png") center center no-repeat;
+		background-size: 44px 44px;
+	}
+}
+
+.btn-folder-list {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: url("../images/btn-folder-list.png") center center no-repeat;
+	background-size: 44px 44px;
+	&:hover {
+		background: url("../images/btn-folder-list-on.png") center center no-repeat;
+		background-size: 44px 44px;
+	}
+}

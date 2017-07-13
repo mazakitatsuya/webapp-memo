@@ -1,0 +1,56 @@
+.modal {
+  display: none;
+  &.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modal__bg {
+  background: colors(background);
+  border-radius: 4px;
+  width: 264px;
+  text-align: center;
+}
+
+.modal__heading {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.modal__description {
+  text-align: center;
+}
+
+.modal__input {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid colors(borderPrimary);
+  border-radius: 4px;
+  width: 224px;
+  height: 40px;
+  background: url(../images/icon-folder.png) left center no-repeat #fff;
+  background-size: 16px 15px;
+  background-position: 10px 12px;
+  padding: 10px 10px 10px 36px;
+}
+
+.modal__btn {
+  margin: 10px 0 20px;
+}
+
+.modal__error {
+  display: none;
+  color: colors(btnAlert);
+  &.open {
+    display: block;
+  }
+}

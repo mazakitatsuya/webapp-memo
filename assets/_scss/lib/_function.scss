@@ -1,0 +1,5 @@
+//function.scss : functionのみ
+
+@function colors($key) {
+    @return map-get($colors, $key);
+}
